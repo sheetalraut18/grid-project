@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+<head>
+   
+    <style>
+        .container {  
+    padding: 50px;  
+  background-color: rgb(77, 179, 213);  
+} 
+        div {
+            box-sizing: border-box;
+            width: 100%;
+            border: 3px solid black;
+            float: left;
+            align-content: center;
+            align-items: center;
+            background-color: rgb(82, 160, 202);
+            
+        }
+ 
+        form {
+            margin: 0 auto;
+            width: 600px;
+           
+           
+        }
+</style>
+<script>
+    function form(){
+        
+    
+        var fname = document.reg_form.fname;  
+        var lname = document.reg_form.lname;  
+        if (fname.value.length <= 0) {  
+            alert("Name is required");  
+            fname.focus();  
+            return false;  
+        }  
+        if (lname.value.length <= 0) {  
+            alert("Last Name is required");  
+            lname.focus();  
+            return false;  
+        }  
+        
+
+if (address.value.length <= 0) {  
+    alert("Address is required");  
+    address.focus();  
+    return false;  
+    }  
+    }
+</script>
+
+</head>
+<title>
+    Registation Form Using HTML and CSS
+</title>
+<body>
+    <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return form()" method="post">
+      <div>  
+    
+       
+<p>First Name: <input type="text"
+                        size="65" name="First Name" placeholder="First Name" required/></p>
+
+        <br />
+        <p>
+            Last Name: <input type="text" size="65" name="LastName" placeholder="Last Name" required/> </p>
+         
+<p>Address: <input type="textarea"
+                        size="65" name="Address" placeholder="Address"  />
+    </p>
+
+        <br />
+        <p>
+            CITY
+            <select type="text" value="" name="City">
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Banglore</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Kolkata</option>
+            </select>
+        </p>
+    <br />
+         
+<p>E-mail Address: <input type="text"
+                        size="65" name="EMail" placeholder="example@gamil.com" id="email" required/></p>
+
+        <br />
+        <p>Phone: <input type="number"
+            size="10" name="Telephone" placeholder="Enter mob no." required/></p>
+
+<br />
+         
+<p>Password: <input type="text"
+                    size="10" name="Password" placeholder="Enter password" id="psw" required/></p>
+
+        <br />
+         
+
+        
+         
+
+
+        <br />
+        <br />
+         
+
+         
+<p>
+    <button type="submit" class="registerbtn"><strong>Register</strong></button>
+</div>
+
+           
+        </p>
+    </div>
+
+    </form>
+</body>
+
+</html>

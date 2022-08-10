@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="stylelist.css">
+
+    <head>
+        <script>
+           
+            function sort1() {
+      
+                
+                var list, i, run, li, stop;
+      
+            
+                list = document.getElementById("list");
+      
+                run = true;
+      
+                while (run) {
+                    run = false;
+                    li = list.getElementsByTagName("LI");
+      
+            
+                    for (i = 0; i < (li.length - 1); i++) {
+                        stop = false;
+                        if (li[i].innerHTML.toLowerCase() <
+                            li[i + 1].innerHTML.toLowerCase()) {
+                            stop = true;
+                            break;
+                        }
+                    }
+      
+    
+                    if (stop) {
+                        li[i].parentNode.insertBefore(
+                                li[i + 1], li[i]);
+      
+                        run = true;
+                    }
+                }
+            }
+            function sort() {
+      
+                
+      var list, i, run, li, stop;
+
+  
+      list = document.getElementById("list");
+
+      run = true;
+
+      while (run) {
+          run = false;
+          li = list.getElementsByTagName("LI");
+
+  
+          for (i = 0; i < (li.length - 1); i++) {
+              stop = false;
+              if (li[i].innerHTML.toLowerCase() >
+                  li[i + 1].innerHTML.toLowerCase()) {
+                  stop = true;
+                  break;
+              }
+          }
+
+
+          if (stop) {
+              li[i].parentNode.insertBefore(
+                      li[i + 1], li[i]);
+
+              run = true;
+          }
+      }
+  }
+        </script>
+    </head>
+        <title>Ordered Unordered and Nested List</title>
+        <body>
+            <h1>Ordered Unordered and Nested List</h1>
+            <ol  id="list" >
+                <li>Input Devices</li>
+                <ol     >
+
+                    <li>Pointing Devices</li>
+                    <ul >
+                        <li>Mouse</li>
+                        <ul >
+                            <li>Wired Mouse</li>
+                            <li>Wireless Mouse</li>
+                            <ul  >
+                                <li> Bluetooth RF Mouse</li>
+                                <li>  RF Mouse</li>
+
+                            </ul>
+                            <li>Optical Mouse</li>
+                        </ul>
+                        <li>Joystick</li>
+                        <li>Finger Touch</li>
+                    </ul>
+                    <li>Touch Screen</li>
+                    <li>Video/Audio Devices</li>
+                    <ul >
+                        <li>Web Cameras</li>
+                        <li>Speakers</li>
+                    </ul>
+
+                </ol>
+                <li>Output Devices</li>
+                <ol  >
+                    <li> Printers</li>
+                    <ul  >
+                        <li>Laser Printers</li>
+                        <li>LED Printers</li>
+                        <li>Inkjet Printers</li>
+                    </ul>
+
+                </ol>
+            </ol>
+            <button class="button button1" onclick="sort1()">
+             Descending
+        </button>
+        <button class="button button1" onclick="sort()">
+            Ascending
+       </button>
+       
+
+        </body>
+    
+</html>
